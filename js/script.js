@@ -5,10 +5,11 @@ function calculateBMI() {
     const weight = parseFloat(document.getElementById('weight').value);
     const height = parseFloat(document.getElementById('height').value) / 100; // Konversi cm ke m
     const gender = document.getElementById('gender').value;
+    const age = parseInt(document.getElementById('age').value);
 
     // Validasi input
-    if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
-        alert("Masukkan berat dan tinggi badan yang valid.");
+    if (isNaN(weight) || isNaN(height) || isNaN(age) || weight <= 0 || height <= 0 || age > 150) {
+        alert("Masukkan berat, tinggi badan, dan usia yang valid.");
         return;
     }
 
@@ -34,6 +35,7 @@ function calculateBMI() {
         <p><span class="bmi-value">${bmi}</span></p>
         <p>Masuk dalam kategori ${category}</p>
         <p>${gender === 'male' ? 'Laki-laki' : 'Wanita'}</p>
+        <p>Usia ${age} tahun</p>
         <p>${getBMIDescription(category)}</p>
     `;
     resultDiv.style.display = 'block';
@@ -52,4 +54,14 @@ function getBMIDescription(category) {
         default:
             return '';
     }
+}
+
+function resetForm() {
+    // Reset form inputs
+    document.getElementById('bmiForm').reset();
+    
+    // Sembunyikan hasil
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'none';
+    resultDiv.innerHTML = '';
 }

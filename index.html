@@ -18,6 +18,9 @@
             
             <label for="height">Tinggi Badan (cm):</label>
             <input type="number" id="height" name="height" required>
+
+            <label for="age">Usia (tahun):</label>
+            <input type="number" id="age" name="age" required min="0" max="150">
             
             <label for="gender">Jenis Kelamin:</label>
             <select id="gender" name="gender">
@@ -26,28 +29,22 @@
             </select>
             
             <button type="button" onclick="calculateBMI()">Hitung BMI</button>
+            <button type="reset" onclick="resetForm()" class="reset-button">Reset</button>
         </form>
         
         <div id="result" class="result">
             <!-- Hasil BMI akan ditampilkan di sini -->
         </div>
+
+        <!-- Feature Information-->
         <div class="info">
             <h2>Keunggulan Fitur</h2>
             <li>Menghitung berat badan</li>
             <li>Menentukan kategori berat badan ideal atau tidak</li>
             <li>Mempersiapkan program penurunan berat badan</li>
-
             <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti Dokter.</p>
-
             <p>Kalkulator akan memberikan anda gambaran tentang perbandingan berat badan anda dengan nilai umum, BMI (<i>Body Mass Index</i>) dihitung sebagai berat badan anda (dalam kilogram) dibagi dengan kuadrat tinggi badan anda (dalam meter) atau BMI = Kg/M<sup>2</sup>.</p>
 
-            <p>BMI(<i>Body Mass Index</i>) yang digunakan untuk mengukur berat badan ideal seseorang berdasarkan tinggi dan berat badan. Berikut adalah kategori BMI:</p>
-            <ul>
-                <li><strong>Kurang dari 18.5:</strong> Kekurangan berat badan</li>
-                <li><strong>18.5 – 24.9:</strong> Normal (ideal)</li>
-                <li><strong>25.0 – 29.9:</strong> Kelebihan berat badan</li>
-                <li><strong>30.0 atau lebih:</strong> Kegemukan (Obesitas)</li>
-            </ul>
         </div>
         
         <!-- Saran -->
@@ -60,6 +57,10 @@
     </div>
 
     <script src="js/script.js"></script>
+
+    <footer>
+        <p style="margin: 10;">&copy; 2025 Kalkulator BMI. Made by farhanmawardi</p>
+    </footer>
 </body>
 
 </html>
