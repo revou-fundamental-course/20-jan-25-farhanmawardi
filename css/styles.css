@@ -1,60 +1,63 @@
 /* Ini File CSS */
 
-/* Ini File CSS */
-
-main {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     display: flex;
-    gap: 40px;
-    padding: 32px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-footer {
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-.main-header {
-    text-align: center;
+label {
+    display: block;
+    margin-bottom: 5px;
 }
 
-input[type=number] {
+input, select {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-}
-
-form {
-    background-color: antiquewhite;
-    padding: 32px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 16px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
+    width: 100%;
     border: none;
-    padding: 8px;
-    color: antiquewhite;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
 }
 
-.bg-blueviolet {
-    background-color: blueviolet;
+button:hover {
+    background-color: #218838;
 }
 
-.bg-grey {
-    background-color: grey;
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    display: none;
 }
 
-.result-section {
-    padding: 16px;
-    text-align: center;
-    background-color: antiquewhite;
-}
-
-#result-bmi {
-    font-size: xxx-large;
-    font-family: math;
+.result h2 {
+    margin-top: 0;
 }
