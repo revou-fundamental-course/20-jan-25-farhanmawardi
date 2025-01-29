@@ -18,36 +18,36 @@ function calculateBMI() {
     // Menentukan kategori BMI
     let category = '';
     if (bmi < 18.5) {
-        category = 'Kekurangan berat badan';
+        category = 'kekurangan berat badan';
     } else if (bmi >= 18.5 && bmi <= 24.9) {
-        category = 'Normal (ideal)';
+        category = 'normal (ideal)';
     } else if (bmi >= 25.0 && bmi <= 29.9) {
-        category = 'Kelebihan berat badan';
+        category = 'kelebihan berat badan';
     } else {
-        category = 'Kegemukan (Obesitas)';
+        category = 'kegemukan (Obesitas)';
     }
 
     // Menampilkan hasil
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = `
-        <h2>Hasil BMI</h2>
-        <p>BMI Anda: ${bmi}</p>
-        <p>Kategori: ${category}</p>
-        <p>Jenis Kelamin: ${gender === 'male' ? 'Laki-laki' : 'Wanita'}</p>
-        <p>Penjelasan: ${getBMIDescription(category)}</p>
+        <h2>Hasil BMI Anda</h2>
+        <p><span class="bmi-value">${bmi}</span></p>
+        <p>Masuk dalam kategori ${category}</p>
+        <p>${gender === 'male' ? 'Laki-laki' : 'Wanita'}</p>
+        <p>${getBMIDescription(category)}</p>
     `;
     resultDiv.style.display = 'block';
 }
 
 function getBMIDescription(category) {
     switch (category) {
-        case 'Kekurangan berat badan':
+        case 'kekurangan berat badan':
             return 'Anda berada dalam kategori kekurangan berat badan. Disarankan untuk meningkatkan asupan kalori dan nutrisi.';
-        case 'Normal (ideal)':
+        case 'normal (ideal)':
             return 'Anda berada dalam kategori berat badan normal. Pertahankan pola makan dan gaya hidup sehat.';
-        case 'Kelebihan berat badan':
+        case 'kelebihan berat badan':
             return 'Anda berada dalam kategori kelebihan berat badan. Disarankan untuk mengurangi asupan kalori dan meningkatkan aktivitas fisik.';
-        case 'Kegemukan (Obesitas)':
+        case 'kegemukan (Obesitas)':
             return 'Anda berada dalam kategori kegemukan (obesitas). Disarankan untuk berkonsultasi dengan dokter atau ahli gizi untuk rencana penurunan berat badan.';
         default:
             return '';

@@ -58,8 +58,18 @@ button:hover {
     background-color: #e9ecef;
     border-radius: 4px;
     display: none;
+    text-align: center; /* Menengahkan teks */
+    margin-left: auto; /* Menengahkan secara horizontal */
+    margin-right: auto; /* Menengahkan secara horizontal */
+    width: 95%; /* Lebar div result */
 }
 
 .result h2 {
     margin-top: 0;
+}
+
+.bmi-value {
+    font-size: 2em; /* Ukuran font yang lebih besar */
+    font-weight: bold; /* Tebalkan font */
+    color: #28a745; /* Warna hijau untuk menonjolkan */
 }
